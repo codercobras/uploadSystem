@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        background-color: black;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .title {
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        height: 20vh;
+      }
+
+      .uploadDiv {
+        width: 100vw;
+        height: 10vh;
+        display: grid;
+        place-items: center;
+      }
+
+      #uploadInput {
+        margin-right: 10px;
+      }
+
+      #uploadButton {
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Upload your documents</h1>
+      <h3>Note:- Upload IDcard if student and Certificate if Alumni</h3>
+    </div>
+
+    <div class="uploadDiv">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="userDocument" id="uploadInput" required />
+        <button type="submit" id="uploadButton">Upload</button>
+      </form>
+    </div>
+  </body>
+</html>
